@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    # 注册django-debug-toolbar
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 配置在中间键第一行
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 自定义中间件-实现登录验证（类似路由守卫）
+    'blog.middlewares.check_login_middleware',
 ]
 
 ROOT_URLCONF = 'DjangoBlogs.urls'
@@ -150,3 +156,79 @@ SESSION_CACHE_ALIAS = 'default'
 
 # 如果要修改session数据默认的序列化方式，可以将默认的JSONSerializer修改为PickleSerializer。
 # SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+# 日志配置
+BASE_LOG_DIR = os.path.join(BASE_DIR, "log")
+LOGGING = {
+    'version': 1,
+    # 是否禁用已经存在的日志器
+    'disable_existing_loggers': False,
+    # 日志格式化器
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s %(module)s.%(funcName)s: %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+        'verbose': {
+            'format': '%(asctime)s %(levelname)s [%(process)d-%(threadName)s] '
+                      '%(module)s.%(funcName)s line %(lineno)d: %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        }
+    },
+    # 日志过滤器
+    'filters': {
+        # 只有在Django配置文件中DEBUG值为True时才起作用
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    # 日志处理器
+    'handlers': {
+        # 输出到控制台
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'formatter': 'simple',
+        },
+        # 输出到文件(每周切割一次)
+        'file1': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'access.log',
+            'when': 'W0',
+            'backupCount': 12,
+            'formatter': 'simple',
+            'level': 'INFO',
+        },
+        # 输出到文件(每天切割一次)
+        'file2': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'error.log',
+            'when': 'D',
+            'backupCount': 31,
+            'formatter': 'verbose',
+            'level': 'WARNING',
+        },
+    },
+    # 日志器记录器
+    'loggers': {
+        'django': {
+            # 需要使用的日志处理器
+            'handlers': ['console', 'file1', 'file2'],
+            # 是否向上传播日志信息
+            'propagate': True,
+            # 日志级别(不一定是最终的日志级别)
+            'level': 'DEBUG',
+        },
+    }
+}
+
+# 配置Django-Debug-Toolbar
+DEBUG_TOOLBAR_CONFIG = {
+    # 引入jQuery库
+    'JQUERY_URL': 'https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js',
+    # 工具栏是否折叠
+    'SHOW_COLLAPSED': True,
+    # 是否显示工具栏
+    'SHOW_TOOLBAR_CALLBACK': lambda x: True,
+}

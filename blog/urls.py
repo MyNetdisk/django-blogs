@@ -9,4 +9,8 @@ urlpatterns = [
     path('criticize/', views.praise_or_criticize),
     path('login/', views.login),
     path('captcha/', views.get_captcha),
+    path('excel/', views.export_teachers_excel),
+    path('pdf/', views.export_pdf),
+    path('teachers_data/', views.get_teachers_data),
+    path('echarts/', views.show_echarts),
 ]

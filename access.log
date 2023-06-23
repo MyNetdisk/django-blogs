@@ -1,0 +1,313 @@
+2023-06-23 17:34:23 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:35:09 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:35:10 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:35:20 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:35:21 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:36:04 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:36:05 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:36:24 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:36:25 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:38:21 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:39:04 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:39:27 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:39:28 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:39:47 basehttp.log_message: "GET / HTTP/1.1" 200 582
+2023-06-23 17:40:09 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 1942
+2023-06-23 17:40:40 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:40:41 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:40:53 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:40:54 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:40:56 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 1942
+2023-06-23 17:44:08 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:44:09 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:44:17 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:44:18 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:44:32 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:44:33 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:46:38 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:46:40 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:46:47 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 1942
+2023-06-23 17:47:42 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:47:43 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:48:12 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:48:14 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:48:19 log.log_response: Internal Server Error: /blog/subjects/
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\debug_toolbar\middleware.py", line 74, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\debug_toolbar\toolbar.py", line 82, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+2023-06-23 17:48:19 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 500 139909
+2023-06-23 17:48:49 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:48:51 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:48:55 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:48:56 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:48:58 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 1942
+2023-06-23 17:49:52 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 17:49:53 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:49:58 log.log_response: Internal Server Error: /blog/subjects/
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\debug_toolbar\middleware.py", line 74, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\debug_toolbar\toolbar.py", line 82, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+2023-06-23 17:49:58 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 500 139909
+2023-06-23 17:50:05 log.log_response: Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\debug_toolbar\middleware.py", line 74, in __call__
+    rendered = toolbar.render_toolbar()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\debug_toolbar\toolbar.py", line 82, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+2023-06-23 17:50:05 basehttp.log_message: "GET / HTTP/1.1" 500 139775
+2023-06-23 17:50:36 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\urls.py changed, reloading.
+2023-06-23 17:50:37 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:50:42 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\urls.py changed, reloading.
+2023-06-23 17:50:44 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:50:46 basehttp.log_message: "GET / HTTP/1.1" 200 9562
+2023-06-23 17:50:47 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+2023-06-23 17:50:47 basehttp.log_message: "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+2023-06-23 17:50:47 basehttp.log_message: "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+2023-06-23 17:50:47 basehttp.log_message: "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+2023-06-23 17:50:58 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 10943
+2023-06-23 17:51:33 basehttp.log_message: "GET /__debug__/render_panel/?store_id=3479269d30be4dc3ae48656220500253&panel_id=SQLPanel HTTP/1.1" 200 38650
+2023-06-23 17:51:53 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 200 5632
+2023-06-23 17:52:50 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\urls.py changed, reloading.
+2023-06-23 17:52:51 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 17:53:05 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 200 5632
+2023-06-23 17:53:07 basehttp.log_message: "GET /__debug__/render_panel/?store_id=3479269d30be4dc3ae48656220500253&panel_id=SQLPanel HTTP/1.1" 200 120
+2023-06-23 17:53:22 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 10942
+2023-06-23 17:53:22 basehttp.log_message: "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2023-06-23 17:53:22 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2023-06-23 17:53:23 basehttp.log_message: "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2023-06-23 17:53:23 basehttp.log_message: "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+2023-06-23 17:53:25 basehttp.log_message: "GET /__debug__/render_panel/?store_id=7e711680fe3c436b9d5850d4ccad6fb5&panel_id=SQLPanel HTTP/1.1" 200 22854
+2023-06-23 17:54:33 basehttp.log_message: "GET /blog/echarts/ HTTP/1.1" 200 10278
+2023-06-23 17:54:34 basehttp.log_message: "GET /blog/teachers_data/ HTTP/1.1" 200 122
+2023-06-23 17:54:36 basehttp.log_message: "GET /__debug__/render_panel/?store_id=78696e7592c745eb82dd6bd9f1bd4278&panel_id=SQLPanel HTTP/1.1" 200 115
+2023-06-23 17:54:54 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 10942
+2023-06-23 17:54:56 basehttp.log_message: "GET /blog/teachers/?sno=1 HTTP/1.1" 200 11315
+2023-06-23 17:54:56 basehttp.log_message: "GET /static/images/%E5%85%B3%E9%87%8D%E4%BB%B6%E4%B8%8D%E5%90%88%E6%A0%BC%E9%A1%B9%E5%88%86%E5%B8%83_1.png HTTP/1.1" 404 1933
+2023-06-23 17:54:59 basehttp.log_message: "GET /__debug__/render_panel/?store_id=8fd1a1aa59f54a6eb35a657bff950210&panel_id=SQLPanel HTTP/1.1" 200 24277
+2023-06-23 18:15:31 basehttp.log_message: "GET /blog/praise/?tno=1 HTTP/1.1" 200 51
+2023-06-23 18:15:32 basehttp.log_message: "GET /__debug__/history_sidebar/?store_id=1a36dde1dffe48ffa9d6038bd1b939ed HTTP/1.1" 200 9095
+2023-06-23 18:28:52 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 18:28:53 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:29:10 autoreload.trigger_reload: D:\Project\DjangoBlogs\DjangoBlogs\settings.py changed, reloading.
+2023-06-23 18:29:11 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:29:38 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 200 5632
+2023-06-23 18:29:53 autoreload.trigger_reload: D:\Project\DjangoBlogs\blog\middlewares.py changed, reloading.
+2023-06-23 18:29:54 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:30:13 autoreload.trigger_reload: D:\Project\DjangoBlogs\blog\middlewares.py changed, reloading.
+2023-06-23 18:30:14 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:30:35 log.log_response: Internal Server Error: /blog/excel/
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\DjangoBlogs\blog\middlewares.py", line 19, in wrapper
+    if request.is_ajax():
+       ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+2023-06-23 18:30:35 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 500 71882
+2023-06-23 18:30:35 basehttp.log_message: "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2023-06-23 18:30:35 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2023-06-23 18:30:36 basehttp.log_message: "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2023-06-23 18:30:37 basehttp.log_message: "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+2023-06-23 18:31:23 autoreload.trigger_reload: D:\Project\DjangoBlogs\blog\middlewares.py changed, reloading.
+2023-06-23 18:31:24 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:31:29 log.log_response: Internal Server Error: /blog/excel/
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\DjangoBlogs\blog\middlewares.py", line 20, in wrapper
+    if request.is_ajax():
+       ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+2023-06-23 18:31:30 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 500 71982
+2023-06-23 18:31:57 autoreload.trigger_reload: D:\Project\DjangoBlogs\blog\middlewares.py changed, reloading.
+2023-06-23 18:31:58 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:32:19 log.log_response: Internal Server Error: /blog/excel/
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\DjangoBlogs\blog\middlewares.py", line 20, in wrapper
+    if request.is_ajax():
+       ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+2023-06-23 18:32:19 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 500 71982
+2023-06-23 18:32:32 basehttp.log_message: "GET /blog/subjects/ HTTP/1.1" 200 10943
+2023-06-23 18:32:40 log.log_response: Internal Server Error: /blog/excel/
+Traceback (most recent call last):
+  File "C:\Users\MyNetdisk\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\DjangoBlogs\blog\middlewares.py", line 20, in wrapper
+    if request.is_ajax():
+       ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+2023-06-23 18:32:40 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 500 71845
+2023-06-23 18:33:54 autoreload.trigger_reload: D:\Project\DjangoBlogs\blog\middlewares.py changed, reloading.
+2023-06-23 18:33:55 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2023-06-23 18:34:00 basehttp.log_message: "GET /blog/excel/ HTTP/1.1" 302 0
+2023-06-23 18:34:00 log.log_response: Not Found: /login/
+2023-06-23 18:34:00 basehttp.log_message: "GET /login/?backurl=/blog/excel/ HTTP/1.1" 404 11422
+2023-06-23 18:34:25 autoreload.trigger_reload: D:\Project\DjangoBlogs\blog\middlewares.py changed, reloading.
+2023-06-23 18:34:27 autoreload.run_with_reloader: Watching for file changes with StatReloader
