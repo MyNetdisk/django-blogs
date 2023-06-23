@@ -27,6 +27,10 @@
         text-decoration: none;
         color: darkcyan;
       }
+      img {
+        weight: 20px;
+        height: 20px;
+      }
     </style>
   </head>
   <body>
@@ -42,7 +46,7 @@
           <dt>
             <a href="/blog/teachers/?sno={{ subject.no }}">{{subject.name}}</a>
             {% if subject.is_hot %}
-            <img src="" alt="" />
+            <img src="/static/images/chart.png" alt="" />
             {% endif %}
           </dt>
           <dd></dd>
