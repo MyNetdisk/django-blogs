@@ -1,5 +1,6 @@
 from io import BytesIO
 from urllib.parse import quote
+from bpmappers import RawField
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from random import sample
@@ -7,6 +8,38 @@ from blog.models import Subject, Teacher, User
 from blog.utils import Captcha, gen_md5_digest, gen_random_code
 import xlwt
 from reportlab.pdfgen import canvas
+from bpmappers.djangomodel import ModelMapper
+from rest_framework import serializers
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+
+class SubjectMapper(ModelMapper):
+    isHot = RawField('is_hot')
+
+    class Meta:
+        model = Subject
+        exclude = ('is_hot',)
+
+
+class SubjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subject
+        fields = '__all__'
+
+
+class SubjectSimpleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Subject
+        fields = ('no', 'name')
+
+
+class TeacherSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Teacher
+        exclude = ('subject', )
 
 
 # Create your views here.
@@ -164,3 +197,36 @@ def get_teachers_data(request):
         'good_counts': good_counts,
         'bad_counts': bad_counts,
     })
+
+
+def show_subjects_api(request):
+    queryset = Subject.objects.all()
+    subjects = []
+    for subject in queryset:
+        subjects.append(SubjectMapper(subject).as_dict())
+    return JsonResponse(subjects, safe=False)
+
+
+@api_view(('GET',))
+def show_subjects_api_restful(request):
+    subjects = Subject.objects.all().order_by('no')
+    # 创建序列化器对象并指定序列化模型
+    serializer = SubjectSerializer(subjects, many=True)
+    # 通过序列化器的data属性获得模型对应的字典并通过创建Response对象返回JSON格式的数据
+    return Response(serializer.data)
+
+
+@api_view(('GET',))
+def show_teachers_api_restful(request: HttpRequest) -> HttpResponse:
+    try:
+        sno = int(request.GET.get('sno'))
+        print('sno', sno)
+        subject = Subject.objects.only('name').get(no=sno)
+        print('subject', subject)
+        teachers = Teacher.objects.filter(
+            subject=subject).defer('subject').order_by('no')
+        subject_seri = SubjectSimpleSerializer(subject)
+        teacher_seri = TeacherSerializer(teachers, many=True)
+        return Response({'subject': subject_seri.data, 'teachers': teacher_seri.data})
+    except (TypeError, ValueError, Subject.DoesNotExist):
+        return Response(status=404)

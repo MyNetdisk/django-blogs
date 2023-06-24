@@ -13,4 +13,7 @@ urlpatterns = [
     path('pdf/', views.export_pdf),
     path('teachers_data/', views.get_teachers_data),
     path('echarts/', views.show_echarts),
+    path('api/subjects/', views.show_subjects_api),
+    path('api/restful/subjects/', views.show_subjects_api_restful),
+    path('api/restful/teachers/', views.show_teachers_api_restful),
 ]

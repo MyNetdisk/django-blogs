@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>学科信息</title>
+    <style>
+      /* 此处省略层叠样式表 */
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>扣丁学堂所有学科</h1>
+      <hr />
+      <div id="main">
+        <dl v-for="subject in subjects">
+          <dt>
+            <a :href="'/static/html/teachers.html?sno=' + subject.no">
+              {{ subject.name }}
+            </a>
+            <img
+              v-if="subject.is_hot"
+              src="/static/images/hot-icon-small.png"
+            />
+          </dt>
+          <dd>{{ subject.intro }}</dd>
+        </dl>
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script>
+      let app = new Vue({
+        el: "#main",
+        data: {
+          subjects: [],
+        },
+        created() {
+          fetch("/blog/api/subjects/")
+            .then((resp) => resp.json())
+            .then((json) => {
+              this.subjects = json;
+            });
+        },
+      });
+    </script>
+  </body>
+</html>

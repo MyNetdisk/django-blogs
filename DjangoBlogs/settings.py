@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'blog',
     # 注册django-debug-toolbar
     'debug_toolbar',
+    # 配置DRF
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -231,4 +233,32 @@ DEBUG_TOOLBAR_CONFIG = {
     'SHOW_COLLAPSED': True,
     # 是否显示工具栏
     'SHOW_TOOLBAR_CALLBACK': lambda x: True,
+}
+
+# 下面的配置根据项目需要进行设置(配置DRF)
+REST_FRAMEWORK = {
+    # 配置默认页面大小
+    # 'PAGE_SIZE': 10,
+    # 配置默认的分页类
+    # 'DEFAULT_PAGINATION_CLASS': '...',
+    # 配置异常处理器
+    # 'EXCEPTION_HANDLER': '...',
+    # 配置默认解析器
+    # 'DEFAULT_PARSER_CLASSES': (
+    #     'rest_framework.parsers.JSONParser',
+    #     'rest_framework.parsers.FormParser',
+    #     'rest_framework.parsers.MultiPartParser',
+    # ),
+    # 配置默认限流类
+    # 'DEFAULT_THROTTLE_CLASSES': (
+    #     '...'
+    # ),
+    # 配置默认授权类
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     '...',
+    # ),
+    # 配置默认认证类
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     '...',
+    # ),
 }
